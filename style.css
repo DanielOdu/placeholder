@@ -12,7 +12,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-weight: 900;
-  font-size: smaller;
+  font-size: 0.6rem;
   font-family: "Inter", sans-serif;
   font-family: "Rubik", sans-serif;
 }
@@ -25,18 +25,65 @@ body {
 
 .container {
   display: flex;
+  /* flex-direction: column; */
   width: 100%;
   height: 100vh;
-  margin: none;
+  margin: auto;
+  text-align: center;
   justify-content: center;
   align-items: center;
   background-color: rgb(250, 250, 250);
+  transition: all;
 }
 
 .header {
+  min-width: 320px;
   color: rgb(13, 13, 13);
+  transition: all;
+  text-align: left;
+  display: inline-block;
+  transform-origin: left;
 }
 
 span {
   font-weight: 400;
+}
+
+.words::after {
+  opacity: 1;
+  content: "one";
+  animation-name: replacement;
+  animation-duration: 4s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  /* text-align: left; */
+  justify-self: left;
+  /* animation-direction: absolute; */
+}
+
+@keyframes replacement {
+  0% {
+    opacity: 0;
+    content: "CHECK BACK SOON";
+  }
+  20% {
+    opacity: 1;
+    content: "CHECK BACK SOON";
+  }
+  40% {
+    opacity: 0;
+    content: "CHECK BACK SOON";
+  }
+  60% {
+    opacity: 0;
+    content: "UPDATING";
+  }
+  80% {
+    opacity: 1;
+    content: "UPDATING";
+  }
+  100% {
+    opacity: 0;
+    content: "UPDATING";
+  }
 }
