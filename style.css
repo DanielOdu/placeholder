@@ -12,7 +12,7 @@ body {
   /* font-family: Arial, Helvetica, sans-serif; */
   /* font-family: "Courier New", Courier, monospace; */
   /* font-weight: bold; */
-  font-size: 0.6rem;
+  font-size: 6px;
   /* font-family: "Inter", sans-serif;
   font-family: "Rubik", sans-serif; */
   background-color: rgb(242, 242, 242);
@@ -20,12 +20,13 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-  body {
+  /* body {
     font-size: 0.4rem;
-  }
-  span {
-    font-size: 0.4rem;
-  }
+  } */
+  /* span {
+    font-size: 4px;
+    color: red;
+  } */
 }
 
 *,
@@ -69,11 +70,11 @@ body {
 } */
 
 span {
-  font-size: 0.8rem;
   font-weight: 400;
 }
 
 .words::after {
+  font-size: 8px;
   opacity: 1;
   content: "one";
   animation-name: replacement;
